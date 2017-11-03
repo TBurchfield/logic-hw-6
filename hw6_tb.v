@@ -40,10 +40,10 @@ module hw6_tb(
 		reset = 0;
 		a = 0;
 		b = 0;
-		#10 a = 1; b = 1;
-		#10 a = 0; b = 0;
-		#10 a = 1; b = 0;
-		#10 $stop;        //5 clock cycles, should flicker
+		#20 a = 1; b = 1;
+		#20 a = 0; b = 0;
+		#20 a = 1; b = 0;
+		#20 $stop;        //5 clock cycles, should flicker
 	end
 
 endmodule

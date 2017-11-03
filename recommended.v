@@ -12,6 +12,7 @@ module recommended(
 	parameter S1 = 2'd1;
 	parameter S2 = 2'd2;
 	reg [1:0] state, nextstate;
+	initial state = S0;
 	
 	always @(posedge clk) begin
 		if (reset)
@@ -37,7 +38,7 @@ module recommended(
 			end
 			S1: begin
 				t = 1;
-				if (b)
+				if (~b)
 					nextstate = S2;
 				else
 					nextstate = S1;
